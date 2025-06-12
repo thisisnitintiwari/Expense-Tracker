@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expenseTracker</title>
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(15, 15, 15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+      .container {
+        background-color: rgb(40, 39, 39);
+        width: 300px;
+        border-radius: 3px;
+      }
+      #heading {
+        font-family: sans-serif;
+        color: white;
+        font-size: 1.5rem;
+      }
+      .input-form {
+        padding: 5px;
+        width: 100px;
+        color: white;
+        background-color: rgb(76, 77, 76);
+        border: 1px solid black;
+        outline: none;
+        border-radius: 1.9px;
+        height: 30px;
+      }
+      #contain-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .hidden {
+        display: none;
+      }
+      #add-button {
+        height: 38px;
+        color: white;
+        background-color: rgb(111, 0, 255);
+        border: 0.1px solid rgb(111, 0, 255);
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      #add-button:hover {
+        background-color: rgb(107, 8, 236);
+        border: 0.1px solid rgb(107, 8, 236);
+      }
+      .design {
+        background-color: rgb(76, 77, 76);
+        border: 1px solid rgb(76, 77, 76);
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 35px;
+        width: 240px;
+        border-radius: 3px;
+        color: white;
+      }
+      .delete-button {
+        height: 25px;
+        color: white;
+        background-color: rgb(107, 8, 236);
+        border: 0.1px solid rgb(107, 8, 236);
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+      #expense-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="heading">
+        <h1 id="heading">Expense-Tracker</h1>
+      </div>
+      <div id="contain-form">
+        <form id="expense-form">
+          <input
+            type="text"
+            id="name-input"
+            class="input-form"
+            placeholder="Enter name"
+          />
+          <input
+            type="number"
+            id="amount-input"
+            class="input-form"
+            placeholder="Enter Amount"
+          />
+          <button type="submit" id="add-button">Add</button>
+        </form>
+      </div>
+      <h2>Expenses</h2>
+      <div id="expense-list"></div>
+      <div id="total-value">
+        <p>Total : <span id="total-amount">$0.00</span></p>
+      </div>
+    </div>
+  </body>
+</html>
